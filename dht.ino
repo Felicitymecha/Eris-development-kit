@@ -1,6 +1,6 @@
 #include <DHT.h>
 
-#define SerialMon Serial
+#define SerialMon Serial2
 
 void getTemperature(void);
 void getHumidity(void);
@@ -10,6 +10,7 @@ void getHumidity(void);
 #define LED_PIN PC13
 
 #define DHTTYPE DHT11
+HardwareSerial Serial2(PA10, PA9);
 
 DHT dht(DHT_PIN, DHTTYPE);
 char buffer[100];
